@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+
+</script>
+</head>
+<body>
+
+<div class="topnav">
+  <a style="color: white;"><h3>Search Movies</h3></a> 
+  <a class="search-container">
+    <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term">
+  </a>
+</div>
+
+<section class="mov-sec" *ngFor="let moviename of movies | filter:term"
+>
+    <h1> {{moviename.moviename}}</h1>
+    <img id="imga" src="assets/img/idiot.jpeg">
+
+    <img id="im" src="assets/img/hotstar.png">
+    <img id="im" src="assets/img/netflix.png">
+
+    <hr>
+</section>
+
+
+</body>
+</html>
